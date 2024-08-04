@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>Expense Tracker</h1>
+        <form id="expense-form">
+            <input type="text" id="expense-name" placeholder="Expense Name" required /><br><br>
+            <input type="number" id="expense-amount" placeholder="Amount" required /><br><br>
+            <select id="expense-category" required>
+                <option value="" disabled selected>Select Category</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+            <input type="date" id="expense-date" required /><br><br>
+            <button type="submit">Add Expense</button><br><br>
+        </form>
+        <div class="expense-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Expense Name   </th>
+                        <th>Amount   </th>
+                        <th>Category   </th>
+                        <th>Date   </th>
+                        <th>Action   </th>
+                    </tr>
+                </thead>
+                <tbody id="expense-list"></tbody>
+            </table> <br><br>
+            <div class="total-amount">
+                <h3>Total Amount: ₹<span id="total-amount">0.00</span></h3>
+            </div>
+        </div> <br><br>
+        <div class="filter">
+            <label for="filter-category">Filter by Category : </label>
+            <select id="filter-category">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="Other">Other</option>
+            </select> <br><br>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
